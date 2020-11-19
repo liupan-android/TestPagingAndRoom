@@ -1,0 +1,17 @@
+ext{
+    //Android
+    compileSdkVersion = 30
+    buildToolsVersion = "30.0.2"
+    minSdkVersion = 29
+    targetSdkVersion = 30
+
+
+    //dependence
+    //Navigation
+    navigationFragment = 'androidx.navigation:navigation-fragment:2.3.1'
+    navigationUi = 'androidx.navigation:navigation-ui:2.3.1'
+    viewModel = 'androidx.lifecycle:lifecycle-viewmodel:2.2.0'
+    liveData = 'androidx.lifecycle:lifecycle-livedata:2.2.0'
+    retrofit2 = 'com.squareup.retrofit2:retrofit:2.9.0'
+    converterGson = 'com.squareup.retrofit2:converter-gson:2.9.0'
+}
