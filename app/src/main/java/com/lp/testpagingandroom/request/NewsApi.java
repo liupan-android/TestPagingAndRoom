@@ -1,10 +1,13 @@
 package com.lp.testpagingandroom.request;
 
 import com.lp.testpagingandroom.AppApiConst;
+import com.lp.testpagingandroom.bean.CommonResult;
 import com.lp.testpagingandroom.bean.News;
+import com.lp.testpagingandroom.bean.NewsResult;
 
 import java.util.List;
 
+import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
@@ -24,5 +27,5 @@ public interface NewsApi {
      */
     @FormUrlEncoded
     @POST(AppApiConst.NEWS)
-    List<News> postNews(@Field("channel") String channel, @Field("start") int start, @Field("num") int num);
+    Call<CommonResult<NewsResult>> postNews(@Field("channel") String channel, @Field("start") int start, @Field("num") int num, @Field("appkey") String appkey);
 }

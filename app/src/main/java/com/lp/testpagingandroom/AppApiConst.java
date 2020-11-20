@@ -8,6 +8,6 @@ public class AppApiConst {
 
     public static final String BASE_URL = "https://api.jisuapi.com/";
 
-    public static final String NEWS = "news";
+    public static final String NEWS = "news/get";
 
 }

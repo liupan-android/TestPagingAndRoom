@@ -5,6 +5,8 @@ package com.lp.testpagingandroom.bean;
  * @Date: 2020/11/18
  */
 public class News {
+
+
     //新闻标题
     private String title;
     //时间

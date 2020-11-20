@@ -48,4 +48,5 @@ dependencies {
     implementation rootProject.ext.liveData
     implementation rootProject.ext.retrofit2
     implementation rootProject.ext.converterGson
+    implementation rootProject.ext.glide
 }
