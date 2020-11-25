@@ -1,5 +1,7 @@
 package com.lp.testpagingandroom.request;
 
+import android.util.Log;
+
 import androidx.lifecycle.MutableLiveData;
 
 import com.lp.testpagingandroom.AppApiConst;
@@ -32,9 +34,11 @@ public class NewsRequest {
     public static void getAllNews(int start, int num, NewsViewModel.RequestCallback requestCallback){
         NewsApi newsApi = retrofit.create(NewsApi.class);
         Call<CommonResult<NewsResult>> call = newsApi.postNews(CHANNEL, start, num, APPKEY);
+        Log.e("Thread---", Thread.currentThread().getName());
         call.enqueue(new Callback<CommonResult<NewsResult>>() {
             @Override
             public void onResponse(Call<CommonResult<NewsResult>> call, Response<CommonResult<NewsResult>> response) {
+                Log.e("Thread------", Thread.currentThread().getName());
                 if (response != null && response.isSuccessful() && response.body() != null) {
                     requestCallback.onSuccess(response.body().data.list);
                 }else {

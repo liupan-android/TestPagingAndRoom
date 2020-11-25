@@ -1,22 +1,43 @@
 package com.lp.testpagingandroom.bean;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import com.lp.testpagingandroom.DbConst;
+
 /**
  * @Author: liupan
  * @Date: 2020/11/18
  */
+@Entity(tableName = DbConst.NEWS_TABLE_NAME)
 public class News {
 
+//    @PrimaryKey(autoGenerate = true)
+//    public int id;
 
     //新闻标题
-    private String title;
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "news_title")
+    public String title;
+
     //时间
-    private String time;
+    @ColumnInfo(name = "news_time")
+    public String time;
+
     //来源
-    private String src;
+    @ColumnInfo(name = "news_src")
+    public String src;
+
     //图片
-    private String pic;
+    @ColumnInfo(name = "news_img")
+    public String pic;
+
     //新闻内容
-    private String content;
+    @ColumnInfo(name = "news_content")
+    public String content;
 
     public String getTitle() {
         return title;
